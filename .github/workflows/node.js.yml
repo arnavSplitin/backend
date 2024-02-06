@@ -24,6 +24,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+        cache-dependency-path: './testing/package-lock.json'
     - name: Update backend
       working-directory: ./testing
       run: |
